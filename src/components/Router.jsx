@@ -9,7 +9,9 @@ import Subject from "../pages/Subject.jsx";
 import Attendance from "../pages/Attendance.jsx";
 import DailyAttendance from "../pages/DailyAttendance.jsx";
 import SubjectAttendance from "../pages/SubjectAttendance.jsx";
-
+import StudentDetails from "../pages/StudentDetails.jsx";
+import FacultyDetails from "../pages/FacultyDetails.jsx";
+import FacultyDetails from "../pages/Mark.jsx";
 export function RouterPaths() {
   
   return (
@@ -23,6 +25,9 @@ export function RouterPaths() {
       <Route path="/attendance" element={<Attendance />} />
       <Route path="/dailyattendance" element={<DailyAttendance />} />
       <Route path="/subjectattendance" element={<SubjectAttendance />} />
+      <Route path="/studentdetails" element={<StudentDetails />} />
+      <Route path="/facultydetails" element={<FacultyDetails />} />
+      <Route path="/mark" element={<Mark />} />
     </Routes>
   );
 }
