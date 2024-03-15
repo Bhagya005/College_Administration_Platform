@@ -1,7 +1,9 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import SelectionPage from "../pages/SelectionPage.jsx";
-import Login from "../pages/Login";
+import StudentLogin from "../pages/StudentLogin.jsx";
+import FacultyLogin from "../pages/FacultyLogin.jsx";
+import AdminLogin from "../pages/AdminLogin.jsx";
 import Admin from "../pages/Admin.jsx";
 import Student from "../pages/Student.jsx";
 import Faculty from "../pages/Faculty.jsx";
@@ -17,7 +19,9 @@ export function RouterPaths() {
   
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
+      <Route path="/studentlogin" element={<StudentLogin />} />
+      <Route path="/facultylogin" element={<FacultyLogin />} />
+      <Route path="/adminlogin" element={<AdminLogin />} />
       <Route path="/" element={<SelectionPage />} />
       <Route path="/adminpage" element={<Admin />} />
       <Route path="/student" element={<Student />} />
