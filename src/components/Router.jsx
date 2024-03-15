@@ -11,7 +11,7 @@ import DailyAttendance from "../pages/DailyAttendance.jsx";
 import SubjectAttendance from "../pages/SubjectAttendance.jsx";
 import StudentDetails from "../pages/StudentDetails.jsx";
 import FacultyDetails from "../pages/FacultyDetails.jsx";
-import FacultyDetails from "../pages/Mark.jsx";
+import Mark from "../pages/Mark.jsx";
 import Marks from "../pages/Marks.jsx";
 export function RouterPaths() {
   
