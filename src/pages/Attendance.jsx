@@ -42,7 +42,7 @@ const Attendance = () => {
           id="class"
           value={selectedClass}
           onChange={handleClassChange}
-          className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+          className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none bg-black"
         >
           <option value="Class A">Class CSA</option>
           <option value="Class B">Class CSB</option>
@@ -56,7 +56,7 @@ const Attendance = () => {
           id="date"
           value={selectedDate}
           onChange={handleDateChange}
-          className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+          className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none bg-black"
         />
         <label htmlFor="subject" className="mr-2">
           Subject:
@@ -65,7 +65,7 @@ const Attendance = () => {
           id="subject"
           value={selectedSubject}
           onChange={handleSubjectChange}
-          className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+          className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none bg-black"
         >
           <option value="Discrete Mathematics">Discrete Mathematics</option>
           <option value="Data Analytics">Data Analytics</option>
