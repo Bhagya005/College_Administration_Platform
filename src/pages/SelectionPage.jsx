@@ -8,7 +8,7 @@ function SelectionPage() {
     const navigate = useNavigate(); // Initialize useNavigate
 
     const handleAdminLogin = () => {
-        navigate('/adminlogin'); // Navigate to "/adminlogin" route
+        navigate('/login'); // Navigate to "/adminlogin" route
     };
 
     const handleStudentLogin = () => {
@@ -43,26 +43,9 @@ function SelectionPage() {
                         block={true}
                         onClick={handleAdminLogin} // Call handleAdminLogin onClick
                     >
-                        Admin Login
+                        Login
                     </Button>
-                    <Button
-                        color="green"
-                        buttonType="filled"
-                        size="lg"
-                        block={true}
-                        onClick={handleStudentLogin} // Call handleStudentLogin onClick
-                    >
-                        Student Login
-                    </Button>
-                    <Button
-                        color="indigo"
-                        buttonType="filled"
-                        size="lg"
-                        block={true}
-                        onClick={handleFacultyLogin} // Call handleFacultyLogin onClick
-                    >
-                        Faculty Login
-                    </Button>
+                    
                 </div>
             </div>
         </div>
