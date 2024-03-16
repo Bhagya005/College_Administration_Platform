@@ -15,9 +15,12 @@ function StudentLogin() {
         } else if (username === 'user2@faculty' && password === 'alicebob') {
             // Navigate to "/facultydetails" for student2@saintgits
             navigate('/facultydetails');
-        } else {
+        } else if (username === 'user3@faculty' && password === 'root'){
             // Navigate to "/admin" for any other user
             navigate('/adminpage');
+        }
+        else{
+            alert("Please enter valid credentials");
         }
     };
 
