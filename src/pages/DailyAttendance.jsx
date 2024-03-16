@@ -40,7 +40,7 @@ const DailyAttendance = () => {
           id="datePicker"
           value={selectedDate}
           onChange={handleDateChange}
-          className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+          className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none bg-black"
         />
       </div>
       <div className="flex flex-col">

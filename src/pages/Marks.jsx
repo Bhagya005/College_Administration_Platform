@@ -36,7 +36,12 @@ function FacultyMark() {
     updatedMarksData[index].series2 = value;
     setMarksData(updatedMarksData);
   };
-
+  const handleSubmit = () => {
+    alert('Submitted successfully');
+    // Redirect to the studentdetails page
+    history.push('/studentdetails');
+  };
+  
   return (
     <div className="container mx-auto flex flex-col items-center justify-center h-screen">
   <h1 className="text-2xl font-bold mb-4 text-white">Enter Class</h1>
@@ -124,19 +129,12 @@ function FacultyMark() {
       </div>
     )}
   </div>
-  <Button
-    onClick={() => console.log("Submit clicked")}
-    color="lightBlue"
-    buttonType="filled"
-    size="lg"
-    rounded={false}
-    block={false}
-    iconOnly={false}
-    ripple="light"
-    className="py-4 my-5"
-  >
-    Submit
-  </Button>
+  <button
+        onClick={handleSubmit}
+        className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none mt-4"
+      >
+        Submit
+      </button>
 </div>
 
   );

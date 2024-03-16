@@ -1,9 +1,24 @@
 import React from 'react';
 import { Button } from '@material-tailwind/react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 import videoBackground from '../videos/background-video.mp4'; // Import the video file
 import logo from '../images/logo.png'; // Import the logo image
 
 function SelectionPage() {
+    const navigate = useNavigate(); // Initialize useNavigate
+
+    const handleAdminLogin = () => {
+        navigate('/adminlogin'); // Navigate to "/adminlogin" route
+    };
+
+    const handleStudentLogin = () => {
+        navigate('/studentlogin'); // Navigate to "/studentlogin" route
+    };
+
+    const handleFacultyLogin = () => {
+        navigate('/facultylogin'); // Navigate to "/facultylogin" route
+    };
+
     return (
         <div className="min-h-screen flex flex-col justify-center items-center relative">
             {/* Video Background */}
@@ -26,6 +41,7 @@ function SelectionPage() {
                         buttonType="filled"
                         size="lg"
                         block={true}
+                        onClick={handleAdminLogin} // Call handleAdminLogin onClick
                     >
                         Admin Login
                     </Button>
@@ -34,6 +50,7 @@ function SelectionPage() {
                         buttonType="filled"
                         size="lg"
                         block={true}
+                        onClick={handleStudentLogin} // Call handleStudentLogin onClick
                     >
                         Student Login
                     </Button>
@@ -42,6 +59,7 @@ function SelectionPage() {
                         buttonType="filled"
                         size="lg"
                         block={true}
+                        onClick={handleFacultyLogin} // Call handleFacultyLogin onClick
                     >
                         Faculty Login
                     </Button>

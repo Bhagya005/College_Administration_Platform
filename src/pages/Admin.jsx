@@ -1,7 +1,10 @@
 import React from 'react';
 import { Button } from '@material-tailwind/react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 
 function AdminPage() {
+    const navigate = useNavigate(); // Initialize useNavigate
+
     return (
         <div className="min-h-screen flex flex-col justify-center items-center bg-black text-white">
             <h1 className="text-4xl font-bold mb-8">ADMIN</h1>
@@ -11,6 +14,7 @@ function AdminPage() {
                     buttonType="filled"
                     size="lg"
                     block={true}
+                    onClick={() => navigate('/student')}
                 >
                     Modify Student
                 </Button>
@@ -19,6 +23,7 @@ function AdminPage() {
                     buttonType="filled"
                     size="lg"
                     block={true}
+                    onClick={() => navigate('/faculty')}
                 >
                     Modify Faculty
                 </Button>
@@ -27,6 +32,7 @@ function AdminPage() {
                     buttonType="filled"
                     size="lg"
                     block={true}
+                    onClick={() => navigate('/subject')}
                 >
                     Modify Subject
                 </Button>
