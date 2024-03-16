@@ -73,7 +73,7 @@ const Faculty = () => {
           value={newFaculty.name}
           onChange={handleInputChange}
           placeholder="Name"
-          className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+          className="text-black mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
         />
         <input
           type="text"
@@ -81,7 +81,7 @@ const Faculty = () => {
           value={newFaculty.department}
           onChange={handleInputChange}
           placeholder="Department"
-          className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+          className="text-black mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
         />
         <input
           type="text"
@@ -89,7 +89,7 @@ const Faculty = () => {
           value={newFaculty.subject}
           onChange={handleInputChange}
           placeholder="Subject"
-          className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+          className="text-black mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
         />
         <button
           onClick={addFaculty}

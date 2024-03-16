@@ -51,6 +51,7 @@ const Subject = () => {
     const updatedSubjects = subjects.filter((subject) => subject.id !== id);
     setSubjects(updatedSubjects);
   };
+
   const handleSubmit = () => {
     alert('Submitted successfully');
     // Redirect to the studentdetails page
@@ -68,7 +69,7 @@ const Subject = () => {
             value={newSubject.subject}
             onChange={handleInputChange}
             placeholder="Subject Name"
-            className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+            className="text-black mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
           />
           <input
             type="text"
@@ -76,7 +77,7 @@ const Subject = () => {
             value={newSubject.code}
             onChange={handleInputChange}
             placeholder="Subject Code"
-            className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+            className="text-black mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
           />
           <input
             type="number"
@@ -84,7 +85,7 @@ const Subject = () => {
             value={newSubject.credits}
             onChange={handleInputChange}
             placeholder="Credits"
-            className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+            className="text-black mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
           />
         </div>
       </div>
@@ -96,7 +97,7 @@ const Subject = () => {
             value={newSubject.department}
             onChange={handleInputChange}
             placeholder="Department"
-            className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+            className="text-black mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
           />
           <input
             type="number"
@@ -104,7 +105,7 @@ const Subject = () => {
             value={newSubject.semester}
             onChange={handleInputChange}
             placeholder="Semester"
-            className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+            className="text-black mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
           />
           <input
             type="text"
@@ -112,7 +113,7 @@ const Subject = () => {
             value={newSubject.faculty}
             onChange={handleInputChange}
             placeholder="Faculty"
-            className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+            className="text-black mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
           />
         </div>
       </div>
