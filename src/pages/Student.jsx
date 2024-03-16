@@ -72,6 +72,7 @@ const Student = () => {
       alert('Please fill in all fields');
     }
   };
+
   const handleSubmit = () => {
     alert('Submitted successfully');
     // Redirect to the studentdetails page
@@ -88,7 +89,7 @@ const Student = () => {
           value={newStudent.id}
           onChange={handleInputChange}
           placeholder="ID"
-          className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+          className="text-black mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
         />
         <input
           type="text"
@@ -96,7 +97,7 @@ const Student = () => {
           value={newStudent.name}
           onChange={handleInputChange}
           placeholder="Name"
-          className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+          className="text-black mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
         />
         <input
           type="text"
@@ -104,7 +105,7 @@ const Student = () => {
           value={newStudent.branch}
           onChange={handleInputChange}
           placeholder="Branch"
-          className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+          className="text-black mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
         />
         <input
           type="number"
@@ -112,7 +113,7 @@ const Student = () => {
           value={newStudent.semester}
           onChange={handleInputChange}
           placeholder="Semester"
-          className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
+          className="text-black mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
         />
         {action === 'add' ? (
           <button
