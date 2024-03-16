@@ -51,6 +51,11 @@ const Subject = () => {
     const updatedSubjects = subjects.filter((subject) => subject.id !== id);
     setSubjects(updatedSubjects);
   };
+  const handleSubmit = () => {
+    alert('Submitted successfully');
+    // Redirect to the studentdetails page
+    history.push('/studentdetails');
+  };
 
   return (
     <div className="container mx-auto">
@@ -152,6 +157,12 @@ const Subject = () => {
           ))}
         </tbody>
       </table>
+      <button
+        onClick={handleSubmit}
+        className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none mt-4"
+      >
+        Submit
+      </button>
     </div>
   );
 };

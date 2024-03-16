@@ -27,7 +27,7 @@ export function RouterPaths() {
       <Route path="/student" element={<Student />} />
       <Route path="/faculty" element={<Faculty />} />
       <Route path="/subject" element={<Subject />} />
-      <Route path="/attendance" element={<Attendance />} />
+      <Route path="/Attendance" element={<Attendance />} />
       <Route path="/dailyattendance" element={<DailyAttendance />} />
       <Route path="/subjectattendance" element={<SubjectAttendance />} />
       <Route path="/studentdetails" element={<StudentDetails />} />

@@ -1,22 +1,19 @@
 import React from 'react';
 import { Input, Button } from '@material-tailwind/react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 
 function AdminLogin() {
+    const navigate = useNavigate(); // Initialize useNavigate
+
+    const handleLogin = () => {
+        // Perform authentication logic here (e.g., validate username and password)
+
+        // If authentication succeeds, navigate to "/adminpage"
+        navigate('/adminpage');
+    };
+
     return (
         <div className="min-h-screen flex justify-center items-center bg-black text-white">
-            {/* Left Section with Cool UI Interface */}
-            
-            {/* <div className="hidden lg:block bg-gray-200 w-1/2 h-full p-8 grid grid-cols-4 gap-4">
-                <div className="bg-white h-10 rounded-md"></div>
-                <div className="bg-white h-10 rounded-md"></div>
-                <div className="bg-white h-10 rounded-md"></div>
-                <div className="bg-white h-10 rounded-md"></div>
-                <div className="bg-white h-10 rounded-md"></div>
-                <div className="bg-white h-10 rounded-md"></div>
-                <div className="bg-white h-10 rounded-md"></div>
-                <div className="bg-white h-10 rounded-md"></div>
-            </div> */}
-            
             {/* Right Section with Admin Login Form */}
             <div className="w-full lg:w-1/2 p-8">
                 <h1 className="text-center text-4xl font-bold mb-2">Admin Login</h1>
@@ -38,6 +35,7 @@ function AdminLogin() {
                         buttonType="filled"
                         size="lg"
                         block={true}
+                        onClick={handleLogin} // Call handleLogin onClick
                     >
                         Login
                     </Button>
