@@ -10,7 +10,7 @@ const Attendance = () => {
 
   const [selectedClass, setSelectedClass] = useState(null); // Initially null
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
-  const [selectedSubject, setSelectedSubject] = useState('Mathematics');
+  const [selectedSubject, setSelectedSubject] = useState('Compiler Design');
 
   const handleClassChange = (e) => {
     setSelectedClass(e.target.value);
@@ -74,9 +74,9 @@ const Attendance = () => {
           onChange={handleSubjectChange}
           className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none bg-black"
         >
-          <option value="Discrete Mathematics">Discrete Mathematics</option>
-          <option value="Data Analytics">Data Analytics</option>
-          <option value="Physics">Physics</option>
+          <option value="Algorithm Analysis and Design">Algorithm Analysis and Design</option>
+          <option value="Compiler Design">Compiler Design</option>
+          <option value="Computer Graphics">Computer Graphics</option>
         </select>
       </div>
       
