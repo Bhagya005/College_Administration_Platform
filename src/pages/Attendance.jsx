@@ -8,7 +8,7 @@ const Attendance = () => {
     { id: 4, name: 'Bob Brown', present: false },
   ]);
 
-  const [selectedClass, setSelectedClass] = useState('Class A');
+  const [selectedClass, setSelectedClass] = useState(null); // Initially null
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
   const [selectedSubject, setSelectedSubject] = useState('Mathematics');
 
@@ -49,10 +49,12 @@ const Attendance = () => {
           onChange={handleClassChange}
           className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none bg-black"
         >
+          <option value="">Select a Class</option>
           <option value="Class A">Class CSA</option>
           <option value="Class B">Class CSB</option>
           <option value="Class C">Class ECE</option>
         </select>
+        
         <label htmlFor="date" className="mr-2">
           Date:
         </label>
@@ -76,7 +78,7 @@ const Attendance = () => {
           <option value="Compiler Design">Compiler Design</option>
           <option value="Computer Graphics">Computer Graphics</option>
         </select>
-      </div> 
+      </div>
       <table className="w-full border-collapse border border-gray-300">
         <thead>
           <tr className="bg-gray-100">
