@@ -8,7 +8,7 @@ const Attendance = () => {
     { id: 4, name: 'Bob Brown', present: false },
   ]);
 
-  const [selectedClass, setSelectedClass] = useState('Class A');
+  const [selectedClass, setSelectedClass] = useState(null); // Initially null
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
   const [selectedSubject, setSelectedSubject] = useState('Mathematics');
 
@@ -49,10 +49,12 @@ const Attendance = () => {
           onChange={handleClassChange}
           className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none bg-black"
         >
+          <option value="">Select a Class</option>
           <option value="Class A">Class CSA</option>
           <option value="Class B">Class CSB</option>
           <option value="Class C">Class ECE</option>
         </select>
+        
         <label htmlFor="date" className="mr-2">
           Date:
         </label>
@@ -77,33 +79,37 @@ const Attendance = () => {
           <option value="Physics">Physics</option>
         </select>
       </div>
-      <table className="w-full border-collapse border border-gray-300">
-        <thead>
-          <tr className="bg-gray-100">
-            <th className="border border-gray-300 px-4 py-2 text-black">ID</th>
-            <th className="border border-gray-300 px-4 py-2 text-black">Name</th>
-            <th className="border border-gray-300 px-4 py-2 text-black">Attendance</th>
-          </tr>
-        </thead>
-        <tbody>
-          {students.map((student) => (
-            <tr key={student.id}>
-              <td className="border border-gray-300 px-4 py-2 text-white">{student.id}</td>
-              <td className="border border-gray-300 px-4 py-2 text-white">{student.name}</td>
-              <td className="border border-gray-300 px-4 py-2">
-                <button
-                  onClick={() => toggleAttendance(student.id)}
-                  className={`px-3 py-1 ${
-                    student.present ? 'bg-green-500' : 'bg-red-500'
-                  } text-white rounded-md hover:bg-gray-600 focus:outline-none`}
-                >
-                  {student.present ? 'Present' : 'Absent'}
-                </button>
-              </td>
+      
+      {selectedClass && (
+        <table className="w-full border-collapse border border-gray-300">
+          <thead>
+            <tr className="bg-gray-100">
+              <th className="border border-gray-300 px-4 py-2 text-black">ID</th>
+              <th className="border border-gray-300 px-4 py-2 text-black">Name</th>
+              <th className="border border-gray-300 px-4 py-2 text-black">Attendance</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {students.map((student) => (
+              <tr key={student.id}>
+                <td className="border border-gray-300 px-4 py-2 text-white">{student.id}</td>
+                <td className="border border-gray-300 px-4 py-2 text-white">{student.name}</td>
+                <td className="border border-gray-300 px-4 py-2">
+                  <button
+                    onClick={() => toggleAttendance(student.id)}
+                    className={`px-3 py-1 ${
+                      student.present ? 'bg-green-500' : 'bg-red-500'
+                    } text-white rounded-md hover:bg-gray-600 focus:outline-none`}
+                  >
+                    {student.present ? 'Present' : 'Absent'}
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+
       <button
         onClick={handleSubmit}
         className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none mt-4"
