@@ -6,9 +6,9 @@ function MarksDetailsPage() {
     name: 'John Doe', 
     department: 'Computer Science',
     marks: [
-      { subject: 'Mathematics', series1: 85, series2: 78 },
-      { subject: 'Physics', series1: 92, series2: 88 },
-      { subject: 'Chemistry', series1: 78, series2: 80 },
+      { subject: 'Algorithm Analysis and Design', series1: 85, series2: 78 },
+      { subject: 'Compiler Design', series1: 92, series2: 88 },
+      { subject: 'Computer Graphics', series1: 78, series2: 80 },
     ]
   };
 

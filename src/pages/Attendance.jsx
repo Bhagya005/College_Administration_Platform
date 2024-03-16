@@ -72,11 +72,11 @@ const Attendance = () => {
           onChange={handleSubjectChange}
           className="mr-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none bg-black"
         >
-          <option value="Discrete Mathematics">Discrete Mathematics</option>
-          <option value="Data Analytics">Data Analytics</option>
-          <option value="Physics">Physics</option>
+          <option value="Algorithm Analysis and Design">Algorithm Analysis and Design</option>
+          <option value="Compiler Design">Compiler Design</option>
+          <option value="Computer Graphics">Computer Graphics</option>
         </select>
-      </div>
+      </div> 
       <table className="w-full border-collapse border border-gray-300">
         <thead>
           <tr className="bg-gray-100">

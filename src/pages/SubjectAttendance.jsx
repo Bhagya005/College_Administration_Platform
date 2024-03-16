@@ -10,9 +10,9 @@ const SubjectAttendance = () => {
     const fetchSubjectAttendance = async () => {
       // Simulated data for demonstration
       const simulatedData = [
-        { subject: 'Discrete Mathematics', attendance: 80 },
-        { subject: 'Data Analytics', attendance: 75 },
-        { subject: 'Physics', attendance: 90 },
+        { subject: 'Algorithm Analysis and Design', attendance: 80 },
+        { subject: 'Compiler Design', attendance: 75 },
+        { subject: 'Computer Graphics', attendance: 90 },
       ];
       setSubjectAttendance(simulatedData);
     };
